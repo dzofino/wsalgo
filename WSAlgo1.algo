@@ -1,0 +1,44 @@
+ALGORITHM nb_length_sentence
+VAR
+    str: STRING := "the best in the world";
+    count: INTEGER := 0;
+BEGIN
+    // count each character expect space
+    FOR (init i=0; i < str.length(); i++) DO
+        IF ( str[i] != "") THEN
+            count ++;
+        END_IF
+    END_FOR
+        Write(count)
+END
+
+
+ALGORITHM nb_word_in_sentence
+VAR
+    str: STRING := "the best in the world";
+    count : INTEGER := 1;
+BEGIN
+    // the number of words in the sentence
+    FOR i in str DO
+        IF (i == " ") THEN
+            count += 1;
+        END_IF
+    END_FOR
+    Write(count)
+END
+
+ALGORITHM nb_vowels_in_sentence
+VAR
+    str: STRING := "the best in the world";
+    vowels : CHAR := ['a', 'e', 'i', 'o', 'u'];
+    count : INTEGER := 0;
+BEGIN
+    // the number of words in the sentence
+    FOR i in str  DO
+        IF (i in vowels) THEN
+            count += 1;
+        END_IF
+        num_vowels = count;
+    END_FOR
+    Write(num_vowels);
+END
